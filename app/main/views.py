@@ -1,4 +1,4 @@
-from flask_login import login_required,current_user
+from flask_login import login_required
 from flask import render_template,request,redirect,url_for,abort
 from ..models import User, Pitch, Comment
 # from .forms import UpdateProfile, PitchForm
@@ -42,7 +42,7 @@ def home():
        pitch = pitch_form.pitch.data
        rep = pitch_form.my_category.data
 
-       new_pitch = Pitch(pitch_content = pitch, pitch_category = rep, user = current_user)
+       new_pitch = Pitch(pitch_content = pitch, pitch_category = rep)
        new_pitch.save_pitch()
 
        return redirect(url_for('main.home'))
@@ -58,8 +58,6 @@ def category(rep):
    title = f"{rep} category | Tarek's Pitch"
 
    return render_template('category.html', title=title, category=my_category)
-
-
 
 
 @main.route('/user/<uname>/update',methods = ['GET','POST'])

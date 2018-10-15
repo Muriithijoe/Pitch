@@ -1,7 +1,7 @@
 import os
 
 class Config:
-
+    SQLALCHEMY_TRACK_MODIFICATIONS= False
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://username:killshot18@joe/pitch'
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
@@ -11,12 +11,12 @@ class Config:
     #simple mde configurations
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_JS_CDN = True
-
+    SECRET_KEY=os.environ.get("SECRET_KEY")
 class ProdConfig:
     pass
 
 class DevConfig:
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://username:killshot18@joe/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://joe:killshot18@localhost/pitch'
 
     DEBUG = True
 
