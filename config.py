@@ -1,8 +1,7 @@
 import os
 
 class Config:
-    export MAIL_USERNAME=joeace2000@gmail.com
-    export MAIL_PASSWORD=killshot18
+
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://username:killshot18@joe/pitch'
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
