@@ -1,16 +1,26 @@
 {% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block content %}
+    <title> {{ title }} </title>
 
-{% import 'bootstrap/wtf.html' as wtf %}
-
-{% block content%}
     <div class="container">
-        <a href="{{url_for('main.index')}}">
-                <button type="button" class="btn btn-primary btn-sm" style="margin-bottom:10px;">
-                        <span class="glyphicon glyphicon-chevron-left" ></span> Back
-                </button>
-        </a>
-        {{wtf.quick_form(new_pitch_form)}}
+
+        <div class="row">
+
+            <div class="col-md-2 col-lg-2">
+
+            </div>
+
+            <div class=" col-xs-12 col-sm-12 col-md-8 col-lg-8 create-group">
+
+                {{ wtf.quick_form(pitch_form) }}
+
+            </div>
+
+            <div class="col-md-2 col-lg-2">
+
+            </div>
+
+        </div>
     </div>
-
-
 {% endblock %}
