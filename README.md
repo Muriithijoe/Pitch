@@ -10,6 +10,10 @@
 * The link to the live site is on the repository
 * Run the link in your browser.
 * If you have an internet connection it will open
+## Link to live site.
+
+https://thelegitpitch.herokuapp.com/
+
 ## Known Bugs
 There are no known bugs.
 ## Technologies Used
